@@ -1,0 +1,72 @@
+╔═══════════════════════════════════════════════════════════════════════════════╗
+║                                                                               ║
+║           🚀 ACTIVAR GITHUB PAGES - PASO A PASO                              ║
+║                                                                               ║
+║              Trading IA Bot Generator v1.0.0                                  ║
+║                                                                               ║
+╚═══════════════════════════════════════════════════════════════════════════════╝
+
+
+⚠️  ACCIÓN REQUERIDA - HABILITAR GITHUB PAGES
+═══════════════════════════════════════════════════════════════════════════════
+
+Tu repositorio está listo, pero necesitas habilitar GitHub Pages manualmente.
+
+
+🔧 PASOS PARA ACTIVAR
+═══════════════════════════════════════════════════════════════════════════════
+
+1️⃣  VE A SETTINGS
+
+   https://github.com/Trimpulso/xtb/settings
+
+
+2️⃣  BUSCA "Pages" EN LA BARRA LATERAL IZQUIERDA
+
+   Debajo de "Code and automation" verás:
+   - Environments
+   - Branches
+   - Rules
+   - Pages ← HACECLICK AQUÍ
+
+
+3️⃣  EN LA PÁGINA DE GITHUB PAGES
+
+   Verás una sección "Build and deployment"
+
+
+4️⃣  SELECCIONA "GitHub Actions"
+
+   Source: GitHub Actions (selecciona esta opción)
+   
+   (No selecciones "Deploy from a branch")
+
+
+5️⃣  GUARDA
+
+   GitHub Pages está habilitado.
+
+
+⏳ ESPERA 2-3 MINUTOS
+
+   GitHub Actions está compilando tu app
+
+
+✅ VERIFICA EL PROGRESO
+
+   https://github.com/Trimpulso/xtb/actions
+   
+   Busca: "Deploy to GitHub Pages"
+   Espera el checkmark verde ✓
+
+
+🌐 ABRE TU APLICACIÓN
+
+   https://Trimpulso.github.io/xtb
+   
+   ¡Tu app estará en línea!
+
+
+═══════════════════════════════════════════════════════════════════════════════
+IMPORTANTE: El Settings es OBLIGATORIO para que funcione
+═══════════════════════════════════════════════════════════════════════════════
