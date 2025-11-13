@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { ChartBarIcon, TrendingUpIcon, ExclamationIcon, CheckIcon } from 'react-icons/hi';
 import { Line } from 'react-chartjs-2';
 import {
   Chart as ChartJS,
@@ -157,7 +156,7 @@ export const BacktestResults: React.FC<BacktestResultsProps> = ({ results, onSav
         <div className="bg-gray-800/50 backdrop-blur border border-gray-700 rounded-xl p-6">
           <div className="flex items-center justify-between mb-2">
             <span className="text-gray-400 text-sm">Retorno Total</span>
-            <TrendingUpIcon className="w-4 h-4 text-gray-500" />
+            <span className="text-lg">📈</span>
           </div>
           <div className={`text-3xl font-bold ${getMetricColor(data.totalReturnPct, 'return')}`}>
             {data.totalReturnPct > 0 ? '+' : ''}{data.totalReturnPct.toFixed(2)}%
@@ -169,7 +168,7 @@ export const BacktestResults: React.FC<BacktestResultsProps> = ({ results, onSav
         <div className="bg-gray-800/50 backdrop-blur border border-gray-700 rounded-xl p-6">
           <div className="flex items-center justify-between mb-2">
             <span className="text-gray-400 text-sm">Ratio de Sharpe</span>
-            <ChartBarIcon className="w-4 h-4 text-gray-500" />
+            <span className="text-lg">📊</span>
           </div>
           <div className={`text-3xl font-bold ${getMetricColor(data.sharpeRatio, 'sharpe')}`}>
             {data.sharpeRatio.toFixed(2)}
@@ -181,7 +180,7 @@ export const BacktestResults: React.FC<BacktestResultsProps> = ({ results, onSav
         <div className="bg-gray-800/50 backdrop-blur border border-gray-700 rounded-xl p-6">
           <div className="flex items-center justify-between mb-2">
             <span className="text-gray-400 text-sm">Max Drawdown</span>
-            <ExclamationIcon className="w-4 h-4 text-gray-500" />
+            <span className="text-lg">⚠️</span>
           </div>
           <div className={`text-3xl font-bold ${getMetricColor(data.maxDrawdownPct, 'drawdown')}`}>
             {data.maxDrawdownPct.toFixed(2)}%
@@ -193,7 +192,7 @@ export const BacktestResults: React.FC<BacktestResultsProps> = ({ results, onSav
         <div className="bg-gray-800/50 backdrop-blur border border-gray-700 rounded-xl p-6">
           <div className="flex items-center justify-between mb-2">
             <span className="text-gray-400 text-sm">Tasa Ganadora</span>
-            <CheckIcon className="w-4 h-4 text-gray-500" />
+            <span className="text-lg">✅</span>
           </div>
           <div className={`text-3xl font-bold ${getMetricColor(data.winRatePct, 'winrate')}`}>
             {data.winRatePct.toFixed(1)}%
@@ -205,7 +204,7 @@ export const BacktestResults: React.FC<BacktestResultsProps> = ({ results, onSav
         <div className="bg-gray-800/50 backdrop-blur border border-gray-700 rounded-xl p-6">
           <div className="flex items-center justify-between mb-2">
             <span className="text-gray-400 text-sm">Profit Factor</span>
-            <TrendingUpIcon className="w-4 h-4 text-gray-500" />
+            <span className="text-lg">💰</span>
           </div>
           <div className="text-3xl font-bold text-blue-400">
             {data.profitFactor.toFixed(2)}x
