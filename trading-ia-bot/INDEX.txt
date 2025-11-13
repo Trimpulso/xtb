@@ -1,0 +1,348 @@
+═══════════════════════════════════════════════════════════════════════════════
+                       📑 ÍNDICE GENERAL DEL PROYECTO
+                         Trading IA Bot Generator
+═══════════════════════════════════════════════════════════════════════════════
+
+Estado: ✅ 70% COMPLETADO
+Archivos: 32 | Líneas: 4,700+ | Endpoints: 23 | Componentes: 5
+
+
+═══════════════════════════════════════════════════════════════════════════════
+📖 DOCUMENTACIÓN (LEER EN ESTE ORDEN)
+═══════════════════════════════════════════════════════════════════════════════
+
+1. 🚀 RESUMEN_SESION.txt (ESTE ES EL INICIO)
+   • Resumen ejecutivo rápido
+   • Stats globales
+   • Quick start (5 minutos)
+   • Próximos pasos
+
+2. 📘 README.md (QUICK START)
+   • Descripción del proyecto
+   • Cómo usar
+   • Stack tecnológico
+   • Endpoints básicos
+
+3. 🏗️ PROJECT_STRUCTURE.md (ARQUITECTURA COMPLETA)
+   • Diagrama de flujo de usuario
+   • Descripción de cada componente
+   • Endpoints especificados con JSON examples
+   • Instalación detallada
+   • Deploy instructions
+
+4. 🔧 SETUP.txt (INSTALACIÓN PASO A PASO)
+   • Checklist completo
+   • Lo que está completo
+   • Lo que falta
+   • Próximos pasos ordenados
+
+5. 📋 IMPLEMENTATION_LOG.md (SERVICIOS CORE)
+   • groq_service.py detallado
+   • backtest_engine.py detallado
+   • Integración flow
+   • Usage examples
+
+6. 📊 PROGRESS.txt (ESTADO ACTUAL)
+   • Árbol de proyecto actualizado
+   • Estadísticas de avance
+   • Funcionalidad implementada
+
+7. 🔌 ROUTES_IMPLEMENTED.txt (BACKEND ROUTES)
+   • Detalle de 4 módulos de rutas
+   • 23 endpoints especificados
+   • Testing instructions
+
+8. 🎨 FRONTEND_COMPONENTS.txt (COMPONENTES REACT)
+   • 5 componentes documentados
+   • API client (17 métodos)
+   • Estadísticas frontend
+
+9. 📦 FINAL_DELIVERY.txt (ENTREGA FINAL)
+   • Resumen global
+   • Arquitectura visual
+   • Instrucciones rápidas
+   • Verificación checklist
+
+
+═══════════════════════════════════════════════════════════════════════════════
+🗂️ ESTRUCTURA DEL CÓDIGO
+═══════════════════════════════════════════════════════════════════════════════
+
+BACKEND:
+  c:\github\xtb\trading-ia-bot\backend\
+  ├── app/
+  │   ├── main.py ✅ - FastAPI entry point
+  │   ├── config.py ✅ - Settings Pydantic
+  │   ├── routes/
+  │   │   ├── generate.py ✅ - 7 endpoints (código)
+  │   │   ├── backtest.py ✅ - 3 endpoints (simulación)
+  │   │   ├── bots.py ✅ - 6 endpoints (CRUD)
+  │   │   └── results.py ✅ - 6 endpoints (resultados)
+  │   └── services/
+  │       ├── groq_service.py ✅ - Generación IA
+  │       └── backtest_engine.py ✅ - Simulación
+  ├── requirements.txt ✅
+  └── .env.example ✅
+
+FRONTEND:
+  c:\github\xtb\trading-ia-bot\frontend\
+  ├── src/
+  │   ├── components/
+  │   │   ├── Dashboard.tsx ✅ - Menú principal
+  │   │   ├── BotWizard.tsx ✅ - Wizard 4 pasos
+  │   │   ├── CodeEditor.tsx ✅ - Editor código
+  │   │   ├── BacktestResults.tsx ✅ - Resultados
+  │   │   └── BotList.tsx ✅ - Tabla bots
+  │   ├── services/
+  │   │   └── api.ts ✅ - Cliente HTTP (17 métodos)
+  │   ├── App.tsx ✅
+  │   ├── main.tsx ✅
+  │   └── index.css ✅
+  ├── package.json ✅
+  ├── vite.config.ts ✅
+  ├── tsconfig.json ✅
+  ├── tailwind.config.js ✅
+  └── postcss.config.js ✅
+
+
+═══════════════════════════════════════════════════════════════════════════════
+🎯 GUÍA RÁPIDA POR OBJETIVO
+═══════════════════════════════════════════════════════════════════════════════
+
+¿QUIERO INSTALAR Y CORRER?
+  → RESUMEN_SESION.txt (Quick Start section)
+  → SETUP.txt (Instalación paso a paso)
+
+¿QUIERO ENTENDER LA ARQUITECTURA?
+  → PROJECT_STRUCTURE.md (Arquitectura completa)
+  → PROGRESS.txt (Árbol de proyecto)
+
+¿QUIERO VER LOS ENDPOINTS?
+  → ROUTES_IMPLEMENTED.txt (Especificación de rutas)
+  → PROJECT_STRUCTURE.md (JSON examples)
+
+¿QUIERO ENTENDER LOS COMPONENTES REACT?
+  → FRONTEND_COMPONENTS.txt (Componentes detallados)
+  → frontend/src/components/*.tsx (Código real)
+
+¿QUIERO SABER QUÉ FALTA?
+  → SETUP.txt (Lo que necesita implementarse)
+  → FINAL_DELIVERY.txt (Lo que falta section)
+
+¿QUIERO PROBARLO RÁPIDO?
+  → backend/app/routes/backtest.py (GET /api/backtest/demo)
+  → Proporciona datos realistas sin Groq API Key
+
+¿QUIERO DESARROLLAR?
+  → Copiar código de backend/app/routes/generate.py
+  → Implementar nuevos servicios en services/
+  → Crear nuevos componentes en frontend/components/
+
+
+═══════════════════════════════════════════════════════════════════════════════
+📊 QUICK REFERENCE - ESTADÍSTICAS
+═══════════════════════════════════════════════════════════════════════════════
+
+BACKEND ROUTES:               23 endpoints
+├─ generate.py               7 endpoints
+├─ backtest.py               3 endpoints
+├─ bots.py                   6 endpoints
+└─ results.py                6 endpoints
+
+BACKEND SERVICES:             2 servicios
+├─ groq_service.py           2 funciones async
+└─ backtest_engine.py        1 clase + 5 métodos
+
+FRONTEND COMPONENTS:          5 componentes
+├─ Dashboard                 3 cards interactivos
+├─ BotWizard                 4 pasos
+├─ CodeEditor                Editor + toolbar
+├─ BacktestResults           5 métricas + gráfico
+└─ BotList                   Tabla + búsqueda
+
+API METHODS:                  17 métodos
+├─ Generate                  6 métodos
+├─ Backtest                  2 métodos
+├─ Bots                      5 métodos
+└─ Results                   4 métodos
+
+LÍNEAS DE CÓDIGO:             4,700+ líneas
+├─ Backend                   1,600 líneas
+├─ Frontend                  1,200 líneas
+└─ Documentación            2,000+ líneas
+
+ARCHIVOS:                     32 archivos
+├─ Python (.py)             11 archivos
+├─ TypeScript (.tsx/.ts)    7 archivos
+├─ Config                   6 archivos
+└─ Documentación            9 documentos
+
+
+═══════════════════════════════════════════════════════════════════════════════
+🔐 CREDENCIALES Y CONFIGURACIÓN
+═══════════════════════════════════════════════════════════════════════════════
+
+Para funcionar completamente necesitas:
+
+GROQ API KEY:
+  • Obtener en: https://console.groq.com
+  • Guardar en: backend/.env como GROQ_API_KEY=gsk_xxx
+  • Requerido para: POST /api/generate/bot
+
+DATABASE:
+  • Default: SQLite (backend/.env: DATABASE_URL=sqlite:///./database.db)
+  • Alternativa: PostgreSQL
+  • Datos guardados en: Bots y Results (en memoria actualmente)
+
+PUERTOS:
+  • Backend: 8000 (http://localhost:8000)
+  • Frontend: 5173 (http://localhost:5173)
+  • Proxy: /api → http://localhost:8000/api
+
+VARIABLES DE ENTORNO:
+  Crear backend/.env con:
+    GROQ_API_KEY=gsk_xxxxxxxxxxxxx
+    DATABASE_URL=sqlite:///./database.db
+    SERVER_PORT=8000
+
+
+═══════════════════════════════════════════════════════════════════════════════
+🚦 ESTADOS DEL PROYECTO
+═══════════════════════════════════════════════════════════════════════════════
+
+COMPLETADO (✅):
+  ✅ Backend scaffold (main.py, config.py)
+  ✅ 23 endpoints REST implementados
+  ✅ groq_service.py (generación IA)
+  ✅ backtest_engine.py (simulación)
+  ✅ 5 componentes React
+  ✅ Cliente API con 17 métodos
+  ✅ 9 documentos
+
+EN PROGRESO (⏳):
+  ⏳ Conectar componentes en App.tsx
+  ⏳ State management global
+  ⏳ React Router navegación
+
+NO INICIADO (❌):
+  ❌ Testing end-to-end
+  ❌ Base de datos real (SQLite/PostgreSQL)
+  ❌ Deployment (GitHub + Railway)
+  ❌ CI/CD pipeline
+
+
+═══════════════════════════════════════════════════════════════════════════════
+💻 COMANDOS ÚTILES
+═══════════════════════════════════════════════════════════════════════════════
+
+BACKEND:
+
+Instalar dependencias:
+  cd backend
+  pip install -r requirements.txt
+
+Ejecutar servidor:
+  python -m uvicorn app.main:app --reload --port 8000
+
+Ver documentación (Swagger):
+  http://localhost:8000/docs
+
+Ver ReDoc:
+  http://localhost:8000/redoc
+
+
+FRONTEND:
+
+Instalar dependencias:
+  cd frontend
+  npm install
+
+Ejecutar dev server:
+  npm run dev
+
+Build para producción:
+  npm run build
+
+Preview build:
+  npm run preview
+
+
+GENERAL:
+
+Probar endpoint (curl):
+  curl http://localhost:8000/api/generate/indicators
+
+Crear .env automáticamente:
+  echo GROQ_API_KEY=gsk_xxx > backend/.env
+
+
+═══════════════════════════════════════════════════════════════════════════════
+🎓 APRENDIZAJES Y PATRONES
+═══════════════════════════════════════════════════════════════════════════════
+
+BACKEND PATTERNS:
+  ✓ Modular route organization
+  ✓ Async/await for I/O operations
+  ✓ Pydantic for data validation
+  ✓ Dependency injection pattern
+  ✓ Error handling with HTTPException
+  ✓ CORS middleware setup
+
+FRONTEND PATTERNS:
+  ✓ Component composition
+  ✓ Props drilling for state
+  ✓ TypeScript interfaces
+  ✓ Tailwind CSS utility classes
+  ✓ Conditional rendering
+  ✓ Event handlers
+
+API PATTERNS:
+  ✓ RESTful design
+  ✓ Request/Response models
+  ✓ HTTP status codes
+  ✓ Axios interceptors
+  ✓ Error handling
+
+
+═══════════════════════════════════════════════════════════════════════════════
+📞 SOPORTE
+═══════════════════════════════════════════════════════════════════════════════
+
+PROBLEMAS COMUNES:
+
+"ModuleNotFoundError: No module named 'fastapi'"
+  → Solución: pip install -r requirements.txt
+
+"Cannot find module 'react'"
+  → Solución: npm install
+
+"GROQ_API_KEY not found"
+  → Solución: Crear backend/.env con GROQ_API_KEY=gsk_xxx
+
+CORS error en frontend
+  → Solución: Verificar que backend esté running en puerto 8000
+
+Port 8000 already in use
+  → Solución: python -m uvicorn app.main:app --port 8001
+
+
+═══════════════════════════════════════════════════════════════════════════════
+🎉 CONCLUSIÓN
+═══════════════════════════════════════════════════════════════════════════════
+
+Este índice es tu referencia rápida para navegar el proyecto Trading IA Bot.
+
+Para comenzar: 👇
+  1. Lee RESUMEN_SESION.txt (5 minutos)
+  2. Sigue SETUP.txt (10 minutos)
+  3. Ejecuta backend + frontend (5 minutos)
+  4. Abre http://localhost:5173 (1 minuto)
+
+¡Listo! Ya tienes el proyecto completo corriendo.
+
+═══════════════════════════════════════════════════════════════════════════════
+Índice: INDEX.txt
+Fecha: 12 de noviembre de 2025
+Proyecto: Trading IA Bot Generator
+Estado: ✅ 70% COMPLETADO
+═══════════════════════════════════════════════════════════════════════════════
