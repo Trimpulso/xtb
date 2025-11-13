@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { ArrowLeftIcon, SparklesIcon, CheckIcon, XIcon } from 'react-icons/hi';
 
 interface BotWizardProps {
   onBack?: () => void;
@@ -79,7 +78,7 @@ export const BotWizard: React.FC<BotWizardProps> = ({ onBack, onGenerate }) => {
           onClick={onBack}
           className="flex items-center gap-2 px-4 py-2 rounded-lg bg-gray-800 hover:bg-gray-700 text-white transition-colors"
         >
-          <ArrowLeftIcon className="w-5 h-5" />
+          <span className="text-lg">←</span>
           Atrás
         </button>
         <h1 className="text-3xl font-bold text-white">Asistente de Bot</h1>
@@ -120,7 +119,7 @@ export const BotWizard: React.FC<BotWizardProps> = ({ onBack, onGenerate }) => {
                 >
                   {indicator}
                   {botData.indicators.includes(indicator) && (
-                    <CheckIcon className="w-5 h-5 ml-2 inline" />
+                    <span className="text-lg ml-2 inline">✅</span>
                   )}
                 </button>
               ))}
@@ -220,7 +219,7 @@ export const BotWizard: React.FC<BotWizardProps> = ({ onBack, onGenerate }) => {
           <div className="mt-6 p-4 rounded-lg bg-red-500/20 border border-red-500 text-red-200">
             {errors.map((error, i) => (
               <div key={i} className="flex items-center gap-2">
-                <XIcon className="w-5 h-5" />
+                <span className="text-lg">❌</span>
                 {error}
               </div>
             ))}
@@ -240,7 +239,7 @@ export const BotWizard: React.FC<BotWizardProps> = ({ onBack, onGenerate }) => {
             onClick={handleNext}
             className="px-6 py-3 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white font-medium flex items-center gap-2 transition-all"
           >
-            <SparklesIcon className="w-5 h-5" />
+            <span className="text-lg">✨</span>
             {step === 4 ? 'Generar Bot' : 'Siguiente →'}
           </button>
         </div>

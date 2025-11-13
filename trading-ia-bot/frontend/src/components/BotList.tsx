@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { TrashIcon, EyeIcon, PencilIcon } from 'react-icons/hi';
 
 interface BotListProps {
   onBack?: () => void;
@@ -181,21 +180,21 @@ export const BotList: React.FC<BotListProps> = ({ onBack, onEdit, onDelete }) =>
                         className="p-2 rounded-lg bg-blue-500/20 hover:bg-blue-500/30 text-blue-300 transition-colors"
                         title="Ver"
                       >
-                        <EyeIcon className="w-4 h-4" />
+                        <span className="text-lg">👁️</span>
                       </button>
                       <button
                         onClick={() => onEdit?.(bot.id)}
                         className="p-2 rounded-lg bg-yellow-500/20 hover:bg-yellow-500/30 text-yellow-300 transition-colors"
                         title="Editar"
                       >
-                        <PencilIcon className="w-4 h-4" />
+                        <span className="text-lg">✏️</span>
                       </button>
                       <button
                         onClick={() => onDelete?.(bot.id)}
                         className="p-2 rounded-lg bg-red-500/20 hover:bg-red-500/30 text-red-300 transition-colors"
                         title="Eliminar"
                       >
-                        <TrashIcon className="w-4 h-4" />
+                        <span className="text-lg">🗑️</span>
                       </button>
                     </div>
                   </td>

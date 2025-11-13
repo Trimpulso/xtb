@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { ChevronRightIcon, PlusCircleIcon, HistoryIcon, ListIcon } from 'react-icons/hi';
 
 interface DashboardProps {
   onNavigate?: (page: string) => void;
@@ -79,7 +78,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ onNavigate }) => {
               
               <div className="flex items-center justify-between">
                 <span className="text-sm text-white/75">{card.stats}</span>
-                <ChevronRightIcon className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" />
+                <span className="text-lg">▶️</span>
               </div>
             </div>
 

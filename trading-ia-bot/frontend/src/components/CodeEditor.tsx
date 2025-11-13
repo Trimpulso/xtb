@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { ClipboardCheckIcon, PlayIcon, DownloadIcon } from 'react-icons/hi';
 
 interface CodeEditorProps {
   code: string;
@@ -72,14 +71,14 @@ export const CodeEditor: React.FC<CodeEditorProps> = ({ code, onBacktest, onSave
                     }
                   `}
                 >
-                  <ClipboardCheckIcon className="w-4 h-4" />
+                  <span className="text-lg">📋</span>
                   {copied ? 'Copiado!' : 'Copiar'}
                 </button>
                 <button
                   onClick={handleDownload}
                   className="flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium bg-gray-700 hover:bg-gray-600 text-gray-200 transition-colors"
                 >
-                  <DownloadIcon className="w-4 h-4" />
+                  <span className="text-lg">⬇️</span>
                   Descargar
                 </button>
               </div>
