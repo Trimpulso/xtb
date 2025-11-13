@@ -137,7 +137,7 @@ export const CodeEditor: React.FC<CodeEditorProps> = ({ code, onBacktest, onSave
                 }
               `}
             >
-              <PlayIcon className="w-5 h-5" />
+              <span className="text-lg">▶️</span>
               {isLoading ? 'Backtesting...' : 'Ejecutar Backtest'}
             </button>
 
