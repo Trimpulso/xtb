@@ -36,7 +36,7 @@ export default function App() {
   };
 
   return (
-    <Router>
+    <Router basename="/xtb">
       <Routes>
         <Route path="/" element={<Dashboard onNavigate={handleNavigate} />} />
         <Route 
