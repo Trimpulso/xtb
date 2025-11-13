@@ -4,6 +4,7 @@
  */
 
 import axios, { AxiosInstance, AxiosError } from 'axios';
+import { API_BASE_URL } from '../config';
 
 // ═════════════════════════════════════════════════════════════════════════════
 // TIPOS
@@ -130,10 +131,8 @@ export interface ResultResponse {
 
 class ApiClient {
   private client: AxiosInstance;
-  private baseURL: string;
 
-  constructor(baseURL: string = 'http://localhost:8000/api') {
-    this.baseURL = baseURL;
+  constructor(baseURL: string = API_BASE_URL) {
     this.client = axios.create({
       baseURL,
       timeout: 30000,
@@ -144,8 +143,8 @@ class ApiClient {
 
     // Interceptor para errores
     this.client.interceptors.response.use(
-      response => response,
-      error => this.handleError(error)
+      (response: any) => response,
+      (error: AxiosError) => this.handleError(error)
     );
   }
 

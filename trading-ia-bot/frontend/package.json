@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "tsc && vite build && echo 'Build completado en ./dist'"
   },
   "dependencies": {
     "react": "^18.2.0",
