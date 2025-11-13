@@ -29,9 +29,9 @@ export default function App() {
     setCurrentPage('backtest-results');
   };
 
-  const handleSaveBot = async (botName: string) => {
+  const handleSaveBot = async () => {
     // TODO: Integrar con API
-    console.log('Guardando bot:', botName);
+    console.log('Guardando bot');
     setCurrentPage('bot-list');
   };
 
